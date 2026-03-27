@@ -1,0 +1,40 @@
+.site-branding{
+	position:relative;
+	padding:20px;
+	overflow:hidden;
+	height:400px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	background-image: url(https://sello-angelical.lndo.site/wp-content/uploads/2026/03/banner.jpg);
+	background-size:cover;
+	background-position:center;
+	background-repeat:no-repeat;
+	background-attachment: fixed;
+
+	.post-shape{
+		position:absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height:50px;
+		z-index:2;
+
+		@media (min-width:768px){
+			height:100px;
+		}
+	}
+
+	.post-shape-bottom{
+		position:absolute;
+		bottom:-1px;
+		left:0;
+		width:100%;
+		height:50px;
+		transform:rotate(180deg);
+
+		@media (min-width:768px){
+			height:100px;
+		}
+	}
+}
