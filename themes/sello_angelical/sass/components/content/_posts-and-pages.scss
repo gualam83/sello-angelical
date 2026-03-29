@@ -53,11 +53,13 @@ footer {
 		display:grid;
 		grid-template-columns:1fr;
 		gap: 0 20px;
-		padding: 0 50px 120px;
-		margin-bottom: 115px;
+		padding: 0 50px 0;
+		margin-bottom: 40px;
 
 		@media (min-width:768px) {
 			grid-template-columns: repeat(2, 1fr);
+			padding: 0 50px 120px;
+			margin-bottom: 115px;
 
 			article:nth-of-type(2n+1) {
 				margin-top: 46px;
@@ -385,12 +387,27 @@ footer {
 		}
 
 		.navigation {
-			a {
+			.nav-previous,
+			.nav-next{
 				background-color: $color__border-button;
-				color: $color__link-white;
 				padding: 15px;
+			}
+
+			.nav-previous {
+				border-right: solid 1px rgba(255, 255, 255, 0.6);
+			}
+
+			a {
+				background-color: transparent;
+				color: $color__link-white;
+				padding: 0;
 				border-radius: 5px;
 				text-decoration: none;
+
+				@media (min-width:900px) {
+					background-color: $color__border-button;
+					padding: 15px;
+				}
 
 				&:hover {
 					background-color: $color__link-hover;
